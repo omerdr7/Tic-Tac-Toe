@@ -63,7 +63,7 @@ public class Game extends javax.swing.JFrame {
                 || jLabel3.getText().equals("X") && jLabel6.getText().equals("X") && jLabel9.getText().equals("X")
                 || jLabel7.getText().equals("X") && jLabel8.getText().equals("X") && jLabel9.getText().equals("X")
                 || jLabel4.getText().equals("X") && jLabel5.getText().equals("X") && jLabel6.getText().equals("X")) {
-            JOptionPane.showMessageDialog(null, "congratulations!! You won the game.");
+            JOptionPane.showMessageDialog(null, "congratulations!! X won the game.");
             drawKey = 1;
             dispose();
             MainMenu g = new MainMenu();
@@ -77,7 +77,7 @@ public class Game extends javax.swing.JFrame {
                 || jLabel3.getText().equals("O") && jLabel6.getText().equals("O") && jLabel9.getText().equals("O")
                 || jLabel7.getText().equals("O") && jLabel8.getText().equals("O") && jLabel9.getText().equals("O")
                 || jLabel4.getText().equals("O") && jLabel5.getText().equals("O") && jLabel6.getText().equals("O")) {
-            JOptionPane.showMessageDialog(null, "congratulations!! You won the game.");
+            JOptionPane.showMessageDialog(null, "congratulations!! O won the game.");
             drawKey = 2;
             dispose();
             MainMenu g = new MainMenu();
@@ -289,39 +289,57 @@ public class Game extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
+        key = 0;
+        process(jButton1, jLabel1);
+        conditions();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-
+        key = 0;
+        process(jButton2, jLabel2);
+        conditions();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-
+        key = 0;
+        process(jButton4, jLabel4);
+        conditions();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-
+        key = 0;
+        process(jButton5, jLabel5);
+        conditions();
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-
+        key = 0;
+        process(jButton7, jLabel7);
+        conditions();
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-
+        key = 0;
+        process(jButton8, jLabel8);
+        conditions();
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-
+        key = 0;
+        process(jButton3, jLabel3);
+        conditions();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-
+        key = 0;
+        process(jButton6, jLabel6);
+        conditions();
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-
+        key = 0;
+        process(jButton9, jLabel9);
+        conditions();
     }//GEN-LAST:event_jButton9ActionPerformed
 
     /**
