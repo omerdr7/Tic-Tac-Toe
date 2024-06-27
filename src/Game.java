@@ -2,8 +2,56 @@
 import java.awt.Image;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 public class Game extends javax.swing.JFrame {
+
+    int key = 0;
+    int control = 0;
+
+    public void process(JButton button, JLabel label) {
+        if (jRadioButtonX.isSelected()) {
+            Icon i = jLabelX.getIcon();
+            ImageIcon icon = (ImageIcon) i;
+            Image image = icon.getImage().getScaledInstance(button.getWidth(), button.getHeight(), Image.SCALE_SMOOTH);
+            button.setIcon(new ImageIcon(image));
+            button.setEnabled(false);
+            key = 1;
+        } else if (jRadioButtonO.isSelected()) {
+            Icon i = jLabelO.getIcon();
+            ImageIcon icon = (ImageIcon) i;
+            Image image = icon.getImage().getScaledInstance(button.getWidth(), button.getHeight(), Image.SCALE_SMOOTH);
+            button.setIcon(new ImageIcon(image));
+            button.setEnabled(false);
+            key = 2;
+        } else {
+            JOptionPane.showMessageDialog(null, "Please select X or O from button.");
+        }
+        if (jRadioButtonX.isSelected()) {
+            jLabelO.setEnabled(true);
+            jRadioButtonO.setEnabled(true);
+            jLabelX.setEnabled(false);
+            jRadioButtonX.setEnabled(false);
+        } else if (jRadioButtonO.isSelected()) {
+            jLabelO.setEnabled(false);
+            jRadioButtonO.setEnabled(false);
+            jLabelX.setEnabled(true);
+            jRadioButtonX.setEnabled(true);
+        }
+        if (key == 1) {
+            label.setText("X");
+            label.setEnabled(false);
+            control++;
+        } else if (key == 2) {
+            label.setText("O");
+            label.setEnabled(false);
+            control++;
+        } else {
+            System.out.println("Error");
+        }
+    }
 
     public Game() {
         initComponents();
