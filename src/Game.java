@@ -10,6 +10,7 @@ public class Game extends javax.swing.JFrame {
 
     int key = 0;
     int control = 0;
+    int drawKey = 0;
 
     public void process(JButton button, JLabel label) {
         if (jRadioButtonX.isSelected()) {
@@ -50,6 +51,47 @@ public class Game extends javax.swing.JFrame {
             control++;
         } else {
             System.out.println("Error");
+        }
+    }
+
+    public void conditions() {
+        if (jLabel1.getText().equals("X") && jLabel2.getText().equals("X") && jLabel3.getText().equals("X")
+                || jLabel1.getText().equals("X") && jLabel5.getText().equals("X") && jLabel9.getText().equals("X")
+                || jLabel1.getText().equals("X") && jLabel4.getText().equals("X") && jLabel7.getText().equals("X")
+                || jLabel2.getText().equals("X") && jLabel5.getText().equals("X") && jLabel8.getText().equals("X")
+                || jLabel3.getText().equals("X") && jLabel5.getText().equals("X") && jLabel7.getText().equals("X")
+                || jLabel3.getText().equals("X") && jLabel6.getText().equals("X") && jLabel9.getText().equals("X")
+                || jLabel7.getText().equals("X") && jLabel8.getText().equals("X") && jLabel9.getText().equals("X")
+                || jLabel4.getText().equals("X") && jLabel5.getText().equals("X") && jLabel6.getText().equals("X")) {
+            JOptionPane.showMessageDialog(null, "congratulations!! You won the game.");
+            drawKey = 1;
+            dispose();
+            MainMenu g = new MainMenu();
+            g.setVisible(true);
+            dispose();
+        } else if (jLabel1.getText().equals("O") && jLabel2.getText().equals("O") && jLabel3.getText().equals("O")
+                || jLabel1.getText().equals("O") && jLabel5.getText().equals("O") && jLabel9.getText().equals("O")
+                || jLabel1.getText().equals("O") && jLabel4.getText().equals("O") && jLabel7.getText().equals("O")
+                || jLabel2.getText().equals("O") && jLabel5.getText().equals("O") && jLabel8.getText().equals("O")
+                || jLabel3.getText().equals("O") && jLabel5.getText().equals("O") && jLabel7.getText().equals("O")
+                || jLabel3.getText().equals("O") && jLabel6.getText().equals("O") && jLabel9.getText().equals("O")
+                || jLabel7.getText().equals("O") && jLabel8.getText().equals("O") && jLabel9.getText().equals("O")
+                || jLabel4.getText().equals("O") && jLabel5.getText().equals("O") && jLabel6.getText().equals("O")) {
+            JOptionPane.showMessageDialog(null, "congratulations!! You won the game.");
+            drawKey = 2;
+            dispose();
+            MainMenu g = new MainMenu();
+            g.setVisible(true);
+            dispose();
+        }
+        if (control == 9) {
+            if (drawKey == 0) {
+                JOptionPane.showMessageDialog(null, "DRAW!");
+            } else if (drawKey == 1) {
+                JOptionPane.showMessageDialog(null, "X won the game.");
+            } else if (drawKey == 2) {
+                JOptionPane.showMessageDialog(null, "O won the game.");
+            }
         }
     }
 
